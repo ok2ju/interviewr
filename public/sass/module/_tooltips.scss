@@ -1,0 +1,46 @@
+// imports
+@import '../utils/index';
+
+.tooltip {
+  position: relative;
+  
+  &:hover {
+    &:after {
+      background: #333;
+      background: rgba(0,0,0,.8);
+      border-radius: 3px;
+      color: #fff;
+      content: attr(aria-label);
+      font-size: 11px;
+      padding: 5px 8px;
+      position: absolute;
+      z-index: 98;
+      white-space: nowrap;
+    }
+    
+    &:before {
+      border: solid;
+      border-color: #333 transparent;
+      border-width: 0 5px 5px 5px;
+      content: '';
+      position: absolute;
+      z-index: 99;
+    }
+  }
+}
+
+.tooltip-v {
+  @extend .tooltip;
+
+  &:hover {
+    &:after {
+      @include center(x);
+      bottom: -38px;
+    }
+
+    &:before {
+      bottom: -15px;
+      left: 0;
+    }
+  }
+}

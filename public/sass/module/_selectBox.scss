@@ -1,0 +1,14 @@
+// imports
+@import '../utils/index';
+
+// variables
+
+$select-border-color: #e6e6e6;
+.selectBox {
+  min-width: 5.14em;
+  cursor: pointer;
+  @include font-size(14px);
+  padding: 0.57em;
+  border: 1px solid $select-border-color;
+  border-radius: 2px;
+}

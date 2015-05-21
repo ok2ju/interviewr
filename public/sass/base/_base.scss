@@ -1,0 +1,102 @@
+// imports
+@import '../utils/fontUtils';
+// variables
+$primary-font: 'Lato', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+$primary-font-color: rgba(#000, .87);
+$secondary-font-color: rgba(#000, .54);
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  //background-color: #f3f5f6;
+  background-color: #f2f2f2;
+  color: $primary-font-color;
+  font-family: $secondary-font;
+  font-size: 1em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video,
+canvas {
+  max-width: 100%;
+}
+
+iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+h2 {
+  @include font-size(14px);
+  color: lighten($primary-font-color, 46%);
+  font-weight: 500;
+}
+
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  outline: none;
+  padding-left: 0;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, .3);
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: rgba(0, 0, 0, .2);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0, 0, 0, .3);
+}

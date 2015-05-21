@@ -1,0 +1,195 @@
+// imports
+@import '../utils/index';
+
+// variables
+$sideblock-bg-color: #161616;
+$company-page-bg-color: #f9f9f9;
+$company-page-header-bg-color: #fff;
+
+.company-page {
+  overflow-x: hidden;
+}
+
+.sideblock {
+  background-color: $sideblock-bg-color;
+  bottom: 0;
+  color: #fff;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  //width: percentage(350px / 1280px);
+  width: 280px;
+  left: -280px;
+  transition: all .3s ease-in-out;
+
+  &.active {
+    left: 0;
+    //width: 280px;
+  }
+}
+
+.int-section {
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+.int-section__header {
+  font-weight: 400;
+  letter-spacing: 5px;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.int-section__list {
+  list-style: disc;
+  padding-left: 40px;
+}
+
+.int-section__list > li {
+  margin-bottom: 15px;
+
+  &.red {
+    color: #d65831;
+  }
+
+  &.green {
+    color: #40bf53;
+  }
+
+  &.orange {
+    color: #c38c17;
+  }
+
+  &.blue {
+    color: #31d6cc;
+  }
+}
+
+.int-section__list > li > span {
+  color: #fff;
+  font-size: 14px;
+}
+
+.pay-attention {
+  margin-bottom: 50px;
+  padding: 0 25px;
+}
+
+.pay-attention__header {
+  color: #6b6b6b;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.card-link {
+  color: #fff;
+  font-size: 14px;
+}
+
+.user-skills {
+  color: #6b6b6b;
+  font-size: 11px;
+}
+
+.p-photo-container {
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.card-link__photo {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.card-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-list {
+  padding: 0 25px;
+}
+
+.footer-list__item {
+  display: inline-block;
+}
+
+.footer-link {
+  color: #6b6b6b;
+  font-size: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.copyright {
+  color: #6b6b6b;
+  font-size: 10px;
+}
+
+.c-content {
+  @include clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 88.28125%;
+  padding-bottom: 30px;
+  padding-top: 40px;
+}
+
+.c-content-header {
+  @include clearfix;
+  margin-bottom: 20px;
+}
+
+.c-content-header__name {
+  color: $primary-font-color;
+  font-size: 24px;
+  font-weight: 400;
+  float: left;
+  margin-right: 15px;
+}
+
+.btn-group {
+  position: relative;
+  float: left;
+  margin-right: 15px;
+}
+
+.range-wrapper {
+  float: left;
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  #amount {
+    border:0;
+    color:#ebc43c;
+    font-weight:bold;
+  }
+
+  .amount-label {
+    @include font-size(13px);
+  }
+}
+
+#slider-range {
+  border-radius: 2px;
+  height: 8px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  position: relative;
+}
+
+.ui-slider-handle {
+  height: 10px;
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  cursor: default;
+  top: -2px;
+  background-color: #ccc;
+  border: 1px solid rgb(159, 159, 159);
+}

@@ -1,0 +1,138 @@
+// imports
+@import '../utils/index';
+
+.user-cards {
+  text-align: justify;
+
+  .gap {
+    width: 23%;
+    opacity: 0;
+    height: 0;
+    display: inline-block;
+  }
+}
+
+.ui-card {
+  background-color: #fff;
+  border: none;
+  border-radius: 4px;
+  //box-shadow: 0 0 1px #d4d4d5, 0 1px 1px #d4d4d5;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  margin-bottom: 2em;
+
+  @media only screen and (min-width: 768px) {
+    width: 48%;
+    display: inline-block;
+  }
+
+  @media only screen and (min-width: 1170px) {
+    width: 17%;
+    display: inline-block;
+  }
+}
+
+.card-image {
+  display: block;
+  position: relative;
+  padding: 0;
+  background: rgba(0, 0, 0, .05);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: .2857rem .2857rem 0 0;
+    border: none;
+  }
+}
+
+.card-content {
+  background: 0 0;
+  margin: 0;
+  padding: 6px 12px;
+  box-shadow: none;
+  font-size: 1em;
+  border: none;
+  border-radius: 0;
+
+  h1 {
+    @include font-size(14px);
+    color: $primary-font-color;
+    font-weight: bold;
+  }
+
+  .meta {
+    @include font-size(12px);
+    color: rgba(0,0,0,0.70);
+
+    .indicate {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+
+  .group {
+    color: $secondary-font-color;
+    display: inline-block;
+    font-weight: 500;
+  }
+
+  .description {
+    //@include font-size(14px);
+    margin-top: .5em;
+    text-align: left;
+
+    //test
+    @include font-size(12px);
+  }
+}
+
+.card-extra-content {
+  @include clearfix;
+  max-width: 100%;
+  min-height: 0!important;
+  position: static;
+  background: 0 0;
+  width: auto;
+  margin: 0;
+  top: 0;
+  left: 0;
+  box-shadow: none;
+  transition: color .2s ease;
+  border-top: 1px solid rgba(0,0,0,.05);
+
+  //test
+  @include font-size(12px);
+
+  .extra-right {
+    color: $secondary-font-color;
+    float: right;
+    font-weight: 500;
+    padding: .75em 1em;
+  }
+
+  .extra-friends {
+    color: rgba(0,0,0,.5);
+  }
+}
+
+.test-result {
+  @include font-size(12px);
+  @include clearfix;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 6px 12px;
+}
+
+.test-score {
+  @include font-size(11px);
+  color: #999;
+}
+
+.test-text {
+  float: right;
+  margin-right: 5px;
+}

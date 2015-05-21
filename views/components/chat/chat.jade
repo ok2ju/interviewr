@@ -1,0 +1,46 @@
+div.c-chat-wrap
+  div.chat-inner
+    div.chat-head
+      div.chat-head-inner
+        i.fa.fa-comment-o.chat-head-ico
+        h1.chat-head-ico.chat-head-text Chat
+    div.c-conf-wrap
+      ol.conversation
+        li.self
+          div.message
+            p.
+              Hello, how are you?
+            time(datetime='2009-11-13T20:00')
+              i.fa.fa-clock-o.ico-time
+              | Timothy • 51 min
+        li.other
+          div.chat-avatar-wrapper
+            img(src='../app/public/images/12.png').chat-avatar
+          div.message
+            p.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry
+            time(datetime='2009-11-13T20:00')
+              i.fa.fa-clock-o.ico-time
+              | Timothy • 51 min
+        li.self
+          div.message
+            p.
+              It is a long established fact that a reader will be distracted
+            time(datetime='2009-11-13T20:00')
+              i.fa.fa-clock-o.ico-time
+              | Timothy • 51 min
+        li.other
+          div.chat-avatar-wrapper
+            img(src='../app/public/images/12.png').chat-avatar
+          div.message
+            p.
+              Contrary to popular belief
+            time(datetime='2009-11-13T20:00')
+              i.fa.fa-clock-o.ico-time
+              | Timothy • 51 min
+    div.form-chat
+      a(href='#').paperclip-link
+        i.fa.fa-paperclip
+      input(type='text', placeholder='Send message').form-chat__control
+      a(href='#').emoticons-link
+        i.fa.fa-smile-o

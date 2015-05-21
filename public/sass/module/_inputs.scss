@@ -1,0 +1,47 @@
+//variables
+$input-color: #676a6c;
+$input-label-color: #59728e;
+
+.c-form-label {
+  @include font-size(12px);
+  color: $primary-font-color;
+}
+
+.input {
+  @include font-size(13px);
+  border: 1px solid #cfd9db !important;
+  border-radius: 2px;
+  width: 100%;
+  color: $input-color;
+
+  &:focus {
+    outline: none;
+    border-color: #2c97de;
+    box-shadow: 0 0 5px rgba(#2c97de, .2);
+  }
+}
+
+.c-input {
+  @extend .input;
+  padding: 8px !important;
+  
+}
+
+.input-filter {
+  @extend .input;
+  padding: 5px !important;
+}
+
+.caret {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}

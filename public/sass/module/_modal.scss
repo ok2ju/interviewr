@@ -1,0 +1,129 @@
+// imports
+@import '../utils/index';
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(55, 55, 55, .9);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+    z-index: 999;
+  }
+}
+
+.modal-header {
+  padding: 1em;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  background-color: #cfd9db;
+}
+
+.modal-container {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: 4em auto;
+  background: #FFF;
+  //border-radius: .25em .25em .4em .4em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-40px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  margin-top: 200px;
+}
+
+.set-date-form {
+  padding-top: 0;
+  padding: 2em;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    width: 14px;
+    height: 1px;
+    background-color: #47374e;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+    left: 8px;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+    right: 8px;
+  }
+}
+
+.quick-view {
+  @include clearfix;
+  background-color: #fff;
+  display: block;
+  max-width: 900px;
+  z-index: 999;
+
+  margin: 4em auto;
+  position: relative;
+  transform: translateY(-40px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  margin-top: 200px;
+}
+
+.quick-view__photo {
+  width: 40%;
+  float: left;
+}
+
+.quick-view__info {
+  width: 60%;
+  float: left;
+  padding: 2em;
+  transition: opacity .3s, visibility 0s;
+
+  .quick-view__info-name {
+    @include font-size(24px);
+  }
+
+  .quick-view__info-about {
+    @include font-size(14px);
+    margin: 1em 0;
+  }
+}
+
+.quick-view__info-btns-item {
+  display: inline-block;
+}
+
+.quick-view__info-link {
+  @extend .btn;
+  @extend .btn-info;
+}
+
+.clear-float {
+  float: none !important;
+}
+
+.clear-padding {
+  padding: 0;
+}

@@ -1,0 +1,18 @@
+// imports
+@import '../utils/index';
+
+.ico-controll {
+  color: $primary-font-color;
+  font-size: 14px !important;
+  padding: 23px 0;
+}
+
+.ico-company-locate {
+	margin-right: 3px;
+}
+
+.i-card {
+  @include font-size(11px);
+  margin-right: 5px;
+  color: #999;
+}

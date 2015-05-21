@@ -1,0 +1,114 @@
+// imports
+@import '../utils/index';
+// variables
+$primary-btn-color: #86ad73;
+$danger-btn-color: #c6463d;
+$inverse-btn-color: #383838;
+$warning-btn-color: #f1c40f;
+$default-btn-color: #bdc3c7;
+$success-btn-color: #2ecc71;
+$info-btn-color: #3498db;
+$btn-font-color: #fff;
+
+.btn {
+  @include font-size(14px);
+  border-radius: 2px;
+  display: inline-block;
+  margin: 0 .29em;
+  min-width: 5.14em;
+  padding: .7em .57em;
+  text-align: center;
+  transition: border .25s linear,color .25s linear,background-color .25s linear;
+}
+
+.btn-lg {
+  padding: 1.2em 1.5em;
+}
+
+.btn-link {
+  @include font-size(14px);
+  color: $btn-font-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn-block {
+  display: block;
+}
+
+// add material design shadow
+.raised-btn {
+  @include card(1);
+}
+
+.btn-primary {
+  background-color: $primary-btn-color;
+  color: $btn-font-color;
+
+  &:hover {
+    background-color: lighten($primary-btn-color, 10%);
+  }
+}
+
+.btn-danger {
+  background-color: $danger-btn-color;
+  color: $btn-font-color;
+
+  &:hover {
+    background-color: lighten($danger-btn-color, 10%);
+  }
+}
+
+.btn-inverse {
+  background-color: $inverse-btn-color;
+  color: $btn-font-color;
+
+  &:hover {
+    background-color: lighten($inverse-btn-color, 10%);
+  }
+}
+
+.btn-warning {
+  background-color: $warning-btn-color;
+  color: $btn-font-color;
+
+  &:hover {
+    background-color: lighten($warning-btn-color, 10%);
+  }
+}
+
+.btn-default {
+  background-color: $default-btn-color;
+  color: $btn-font-color;
+
+  &:hover {
+    background-color: lighten($default-btn-color, 10%);
+  }
+}
+
+.btn-success {
+  background-color: $success-btn-color;
+  color: $btn-font-color;
+
+  &:hover {
+    background-color: lighten($success-btn-color, 10%);
+  }
+}
+
+.btn-info {
+  /*background: linear-gradient(135deg, rgba(3, 170, 244, 1) 50%,
+                                      rgba(41, 137, 216, 1) 50%,
+                                      rgba(4, 174, 245, 1) 50%);*/
+  /*background: linear-gradient(135deg, rgba(12,107,149,1) 50%,
+                                      rgba(32,124,202,1) 50%,
+                                      rgba(41,137,216,1) 50%,
+                                      rgba(14,111,152,1) 50%);*/
+  background-color: #59728e;                               
+  color: $btn-font-color;
+
+  &:hover {
+    background-color: lighten($info-btn-color, 10%);
+  }
+}

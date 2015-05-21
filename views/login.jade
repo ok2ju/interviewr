@@ -1,0 +1,48 @@
+extends layout/main-layout
+block content
+  section.wrapper
+    div.overlay
+      div.land-container
+        div.logo
+          img(class="logo__item", src="/images/logo.svg", alt="")
+        div.login-container
+          div.form-container
+            form(class="form", name="form")
+              div.auth-form-body
+                p
+                  input(class="input-block login-field", type="text", placeholder="USERNAME", name="username")
+                  span.error-message Wrong username!
+                p
+                  input(class="input-block password-field", type="password", placeholder="PASSWORD", name="password")
+                  span.error-message Oops, wrong password!
+                div.help-btns-wrapper
+                  a(href="#", class="forgot-pass") Forgot pass
+                  div.social-btns
+                    a(href="#")
+                      i.facebook-ico
+                    a(href="/auth/google")
+                      i.google-ico
+                button(type="submit").login-button Login
+                p.dha Don't have an account? -
+                  a(href='/register') Sign up
+  script().
+    $('form[name="form"]').on('submit', function() {
+      var form = $(this);
+
+      $.ajax({
+        url: "/login",
+        type: "POST",
+        data: form.serialize(),
+        statusCode: {
+          200: function() {
+            form.html("Вы вошли в сайт").addClass('alert-success');
+            window.location.href = "/chat";
+          },
+          403: function(jqXHR) {
+            var error = JSON.parse(jqXHR.responseText);
+            $('.error', form).html(error.message);
+          }
+        }
+      });
+      return false;
+    });

@@ -1,0 +1,59 @@
+// imports
+@import '../utils/index';
+
+// variables
+$landing-primary-font-color: #fff;
+
+.wrapper {
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  height: 100%;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, .7);
+  height: 100%;
+}
+
+.land-container {
+  @include center(xy);
+  max-width: 400px;
+  position: absolute;
+}
+
+.landing-about {
+  @include font-size(16px);
+  color: $landing-primary-font-color;
+  font-weight: 300;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.landing-name {
+  @include font-size(25px);
+  color: $landing-primary-font-color;
+  font-family: 'Tw Cen MT', sans-serif;
+  font-weight: 300;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.logo__item {
+  width: 200px;
+}
+
+.landing-register-link {
+  @extend .btn;
+  @extend .btn-lg;
+  @extend .btn-info;
+}
+
+.btn-wrap {
+  margin-bottom: 20px;
+  text-align: center;
+}

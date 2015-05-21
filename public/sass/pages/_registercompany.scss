@@ -1,0 +1,82 @@
+// imports
+@import '../utils/index';
+
+.c-form {
+  @extend .p-col;
+  max-width: 600px;
+}
+
+.c-form-fieldset {
+  margin: 24px 0;
+  border: 0;
+}
+
+.u-fieldset {
+  margin: 0;
+}
+
+.form-section-legend {
+  @include font-size(16px);
+  width: 100%;
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ecf0f1;
+  font-weight: 400;
+}
+
+.error-msg {
+  margin-top: 10px;
+  margin-bottom: 28px;
+  display: none;
+
+  p {
+    @include font-size(13px);
+    background: #e94b35;
+    color: #ffffff;
+    text-align: center;
+    border-radius: .25em;
+    padding: 10px;
+  }
+
+  &.is-visible {
+    display: block;
+  }
+}
+
+.icon {
+  margin: 15px 0;
+}
+
+.submit-wrapper {
+  @include clearfix;
+
+  .c-btn-submit {
+    @include font-size(13px);
+    @extend .btn;
+    @extend .btn-info;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+.c-description {
+  min-height: 200px;
+  resize: vertical;
+  overflow: auto;
+}
+
+.r-company {
+  @extend .p-col;
+}
+
+.r-company__head {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.r-company__about {
+  @include font-size(13px);
+  color: #666;
+}

@@ -1,0 +1,62 @@
+// imports
+@import '../utils/index';
+
+// variables
+$header-bg-color: #9bd8f1;
+$header-font-color: #fff;
+
+.container {
+  @include clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include respond-to('small') {
+    width: 750px;
+  }
+
+  @include respond-to('medium') {
+    width: 970px;
+  }
+
+  @include respond-to('large') {
+    width: 1170px;
+  }
+}
+
+.row {
+  @include make-row;
+}
+
+.content {
+  padding-top: 90px;
+  position: relative;
+  transition: all .3s ease-in-out;
+
+  &.active {
+    left: 280px;
+  }
+}
+
+.p-col {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.content-block {
+  //left: percentage(350px / 1280px);
+  left: 0;
+  position: relative;
+  //top: 66px;
+  //width: percentage(930px / 1280px);
+  transition: all .3s ease-in-out;
+  //width: 100%;
+
+  //test
+  top: 50px;
+
+  &.active {
+    left: 280px;
+  }
+}
