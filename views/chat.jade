@@ -1,3 +1,8 @@
 extends layout/main-layout
 block content
   h1 This is CHAT!!!
+  h2 Hello #{user.get('username')}
+  if (user)
+    a(href='' onclick="$('<form method=POST action=/logout>').submit(); return false").login-button logout
+  else
+    a(href='/login').login-button Login 

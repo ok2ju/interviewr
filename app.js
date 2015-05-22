@@ -23,14 +23,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(require('./middleware/sendHttpError'));
-
 app.use(session({
   secret: config.get('session:secret'),
   key: config.get('session:key'),
   cookie: config.get('session:cookie'),
   store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
+
+app.use(require('./middleware/sendHttpError'));
+app.use(require('./middleware/loadUser'));
 
 require('./routes')(app);
 
